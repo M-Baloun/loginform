@@ -1,13 +1,114 @@
 <!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrace</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: midnightblue;
+        }
+
+        form {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid darkgray;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: dodgerblue;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: dodgerblue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+<form>
+    <h2>Registrace</h2>
 
+    <label for="jméno">Celé jméno:</label>
+    <input type="text" id="jméno" name="jméno" required maxlength="50" placeholder="Zadejte celé jméno">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="vzor@gmail.com">
+
+    <label for="Oblíbený den">Oblíbený den:</label>
+    <select id="Oblíbený den" name="oblíbený den" required>
+        <optgroup label="Všední dny">
+            <option value="Pondělí">Pondělí</option>
+            <option value="Úterý">Úterý</option>
+            <option value="Středa">Středa</option>
+            <option value="Čtvrtek">Čtvrtek</option>
+            <option value="Pátek">Pátek</option>
+        </optgroup>
+        <optgroup label="Víkendové dny">
+            <option value="Sobota">Sobota</option>
+            <option value="Neděle">Neděle</option>
+        </optgroup>
+    </select>
+
+    <label for="heslo">Heslo:</label>
+    <input type="password" id="heslo" name="heslo" required minlength="8" placeholder="Zadejte heslo">
+
+    <label for="potvrďte heslo">Opakujte heslo:</label>
+    <input type="password" id="potvrďte heslo" name="potvrzení hesla" required minlength="8"
+           placeholder="Zadejte heslo znovu">
+
+    <label for="věk">Věk:</label>
+    <input type="number" id="věk" name="věk" min="0" max="120" placeholder="Zadejte věk">
+
+    <label for="barva">Oblíbená barva:</label>
+    <input type="color" id="barva" name="barva">
+
+    <label for="terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        Souhlasím s podmínkami
+    </label>
+
+    <button type="submit">Sign Up</button>
+
+    <a href="#">Login</a>
+</form>
 </body>
 </html>
